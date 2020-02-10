@@ -1,4 +1,4 @@
-#include "_prec.h"
+ï»¿#include "_prec.h"
 #include "DynamicIcon.h"
 #include <string.h>
 
@@ -51,19 +51,19 @@ CDynamicIcon::CDynamicIcon(const char *line1,const char *line2, const int iFarbe
   hBrush = CreateSolidBrush (RGB (255,69,0)); //rot
   break;
   case 21:
-  hBrush = CreateSolidBrush (RGB (175,255,175)); //sehr hell grün
+  hBrush = CreateSolidBrush (RGB (175,255,175)); //sehr hell grÃ¼n
   break;
   case 22:
-  hBrush = CreateSolidBrush (RGB (123,255,123)); //hell grün
+  hBrush = CreateSolidBrush (RGB (123,255,123)); //hell grÃ¼n
   break;
   case 23:
-  hBrush = CreateSolidBrush (RGB (0,255,0)); //grün
+  hBrush = CreateSolidBrush (RGB (0,255,0)); //grÃ¼n
   break;
   case 24:
-  hBrush = CreateSolidBrush (RGB (0,218,0)); //dunkel grün
+  hBrush = CreateSolidBrush (RGB (0,218,0)); //dunkel grÃ¼n
   break;
   case 25:
-  hBrush = CreateSolidBrush (RGB (0,164,0)); //sehr dunkel grün
+  hBrush = CreateSolidBrush (RGB (0,164,0)); //sehr dunkel grÃ¼n
   break;
   default:
   hBrush = CreateSolidBrush (RGB (255,255,255)); // weiss

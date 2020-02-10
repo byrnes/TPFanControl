@@ -1,4 +1,4 @@
-
+ï»¿
 // --------------------------------------------------------------
 //
 //  Thinkpad Fan Control
@@ -161,7 +161,7 @@ FANCONTROL::FANCONTROL(HINSTANCE hinstapp)
 	setzero(this->SmartLevels2, sizeof(this->SmartLevels2));
 	i= 0;
 	this->SmartLevels2[i].temp2= 0;  this->SmartLevels2[i].fan2= 0; i++;
-	// später if ( this->SmartLevels2[i].temp2 != 0 ) dann smart2
+	// spÃ¤ter if ( this->SmartLevels2[i].temp2 != 0 ) dann smart2
 	this->SmartLevels2[i].temp2= 55;  this->SmartLevels2[i].fan2= 3; i++;
 	this->SmartLevels2[i].temp2= 60;  this->SmartLevels2[i].fan2= 5; i++;
 	this->SmartLevels2[i].temp2= 65;  this->SmartLevels2[i].fan2= 7; i++;
@@ -1096,9 +1096,9 @@ switch (msg) {
 				if (temp < 128 && temp!= 0) 
 				{
 					if (Fahrenheit)
-						sprintf_s(obuf2,sizeof(obuf2), "%d°F", temp* 9 /5 +32);
+						sprintf_s(obuf2,sizeof(obuf2), "%dÂ°F", temp* 9 /5 +32);
 					else
-						sprintf_s(obuf2, sizeof(obuf2), "%d°C", temp);
+						sprintf_s(obuf2, sizeof(obuf2), "%dÂ°C", temp);
 
 					size_t strlen_templist2 = strlen_s(templist2,sizeof(templist2));
 
@@ -1162,7 +1162,7 @@ switch (msg) {
 										sprintf_s(obuf+strlen(obuf),sizeof(obuf)-strlen(obuf), "Activation of Fan Control Profile 'Smart Mode 1'");
 									this->Trace(obuf);}
 									this->IndSmartLevel = 0;
-// rüberkopieren
+// rÃ¼berkopieren
 						for (int i= 0; i<32; i++) {
 									this->SmartLevels[i].temp = this->SmartLevels1[i].temp1; 
 									this->SmartLevels[i].fan = this->SmartLevels1[i].fan1;
@@ -1265,7 +1265,7 @@ switch (msg) {
 
 		case WM_CLOSE:
 				//if (this->MinimizeOnClose && (this->MinimizeToSysTray || this->Runs_as_service))   // 0.24 new:  || this->Runs_as_service) 
-				//{MessageBox(NULL, "will Fenster schließen", "TPFanControl", MB_ICONEXCLAMATION);
+				//{MessageBox(NULL, "will Fenster schlieÃŸen", "TPFanControl", MB_ICONEXCLAMATION);
 				::ShowWindow(this->hwndDialog, SW_MINIMIZE);   //}
 				rc= TRUE;
 				break;
@@ -1549,28 +1549,28 @@ void FANCONTROL::ProcessTextIcons(void){
 			case 0:
 			break;
 			case 1:
-			icon = 21; //sehr hell grün
+			icon = 21; //sehr hell grÃ¼n
 			break;
 			case 2:
-			icon = 22; //hell grün
+			icon = 22; //hell grÃ¼n
 			break;
 			case 3:
-			icon = 23; //grün
+			icon = 23; //grÃ¼n
 			break;
 			case 4:
-			icon = 24; //dunkel grün
+			icon = 24; //dunkel grÃ¼n
 			break;
 			case 5:
-			icon = 25; //sehr dunkel grün
+			icon = 25; //sehr dunkel grÃ¼n
 			break;
 			case 6:
-			icon = 25; //sehr dunkel grün
+			icon = 25; //sehr dunkel grÃ¼n
 			break;
 			case 7:
-			icon = 25; //sehr dunkel grün
+			icon = 25; //sehr dunkel grÃ¼n
 			break;
 			case 8:
-			icon = 25; //sehr dunkel grün
+			icon = 25; //sehr dunkel grÃ¼n
 			break;
 			default:
 			icon = oldicon;
@@ -1603,11 +1603,11 @@ void FANCONTROL::ProcessTextIcons(void){
 		
 			if (dishow && !this->NoBallons){
 				if (Fahrenheit){
-					ppTbTextIcon[0]->DiShowballon(_T("shows max. temperature in °F and sensor name, left click on icon shows or hides control window, right click shows menue"),
+					ppTbTextIcon[0]->DiShowballon(_T("shows max. temperature in Â°F and sensor name, left click on icon shows or hides control window, right click shows menue"),
 						_T("TPFanControl new text icon"),NIIF_INFO,11);
 				}
 				else {
-					ppTbTextIcon[0]->DiShowballon(_T("shows max. temperature in °C and sensor name, left click on icon shows or hides control window, right click shows menue"),
+					ppTbTextIcon[0]->DiShowballon(_T("shows max. temperature in Â°C and sensor name, left click on icon shows or hides control window, right click shows menue"),
 						_T("TPFanControl new text icon"),NIIF_INFO,11);
 				}
 
