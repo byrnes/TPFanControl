@@ -104,9 +104,11 @@ FANCONTROL::FANCONTROL(HINSTANCE hinstapp)
 // SensorNames
 		// 78-7F (state index 0-7)
 			strcpy_s(this->gSensorNames[0],sizeof(this->gSensorNames[0]), "cpu"); // main processor
-			strcpy_s(this->gSensorNames[1],sizeof(this->gSensorNames[1]), "aps"); // harddisk protection gyroscope
+			// strcpy_s(this->gSensorNames[1],sizeof(this->gSensorNames[1]), "aps"); // harddisk protection gyroscope
+			strcpy_s(this->gSensorNames[1], sizeof(this->gSensorNames[1]), "gpu"); // discrete gpu (nvidia) on P1
 			strcpy_s(this->gSensorNames[2],sizeof(this->gSensorNames[2]), "crd"); // under PCMCIA slot (front left)
-			strcpy_s(this->gSensorNames[3],sizeof(this->gSensorNames[3]), "gpu"); // graphical processor
+			// strcpy_s(this->gSensorNames[3],sizeof(this->gSensorNames[3]), "gpu"); // graphical processor // n/a on P1
+			strcpy_s(this->gSensorNames[3],sizeof(this->gSensorNames[3]), "x7b"); // enabled if nvidia gpu is on high load
 			strcpy_s(this->gSensorNames[4],sizeof(this->gSensorNames[4]), "bat"); // inside T43 battery
 			strcpy_s(this->gSensorNames[5],sizeof(this->gSensorNames[5]), "x7d"); // usually n/a
 			strcpy_s(this->gSensorNames[6],sizeof(this->gSensorNames[6]), "bat"); // inside T43 battery
