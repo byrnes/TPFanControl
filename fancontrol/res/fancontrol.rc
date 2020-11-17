@@ -144,11 +144,12 @@ END
 
 5000 MENU 
 BEGIN
-    MENUITEM "Thinklight",                  5060
-    MENUITEM "Bluetooth",                   5040
-    MENUITEM SEPARATOR
+    // MENUITEM "Thinklight",                  5060
+    // MENUITEM "Bluetooth",                   5040
+    // MENUITEM SEPARATOR
     MENUITEM "Show Window",                 5010
     MENUITEM "Hide Window",                 5030
+    MENUITEM SEPARATOR
     MENUITEM "Symbol Icon",                 5070
     MENUITEM "Text Icon",                   5080
     MENUITEM SEPARATOR

@@ -1460,8 +1460,8 @@ switch (msg) {
 								if (mode==3)
 										m.CheckMenuItem(5005); 
 
-								m.InsertItem (this->MenuLabelSM1, 5003, 10);
-								m.InsertItem (this->MenuLabelSM2, 5004, 11);
+								m.InsertItem (this->MenuLabelSM1, 5003, 8);
+								m.InsertItem (this->MenuLabelSM2, 5004, 9);
 
 								if ( this->SmartLevels2[0].temp2 == 0 ) 
 								{
