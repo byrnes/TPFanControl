@@ -5,6 +5,8 @@ Confirmed to be working on:
 - ThinkPad X1 Extreme Gen 3 (@dharmatech)
 - ThinkPad P15 Gen 2 (@stavoxnetworks)
 
+Please open an issue to have me add your model to the confirmed list. Thank you!
+
 ## About
 
 This is a fork of https://github.com/byrnes/TPFanControl.
