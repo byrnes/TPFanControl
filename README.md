@@ -1,7 +1,7 @@
 # TPFanControl for dual-fan ThinkPads (P1, X1 Extreme..)
 
 Confirmed to be working on:
-- ThinkPad P1 Gen 3 with Nvidia GPU
+- ThinkPad P1 Gen 3 with Nvidia GPU (Update after more than 1 year of usage: working with no issues whatsoever)
 - ThinkPad X1 Extreme Gen 3 (@dharmatech)
 - ThinkPad P15 Gen 2 (@stavoxnetworks)
 
@@ -30,4 +30,10 @@ Either install [tvicport](https://www.entechtaiwan.com/dev/port/index.shtm) manu
 After you installed the original version of TPFanControl, replace the TPFanControl.exe (and possibly TPFanControl.ini) with the files from the release package or the corresponding files in the `fancontrol/Release` directory.
 
 ## Running at startup
-To my knowledge, running at startup is currently not possible with Windows 10 because it lacks a certificate to prevent the Windows security warning. If you have working and easy to reproduce instructions how to create a self signed certificate: please let me know or create a pull request.
+To my knowledge, running at startup is currently not possible with Windows 10 because it lacks a certificate to prevent the Windows security warning.
+
+You can however achieve the same result with Windows Task Scheduler:
+- Create a new task, give it a descriptive name and select "Run with highest privileges"
+- In tab "Triggers" create a new trigeger and select "Begin task": "At log on"
+- In tab "Actions", create a new action and select "Start a program" and the path to TPFanControl.exe
+- Enjoy :)
