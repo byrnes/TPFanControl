@@ -1,7 +1,7 @@
 # TPFanControl for dual-fan ThinkPads (P1, X1 Extreme..)
 
 Confirmed to be working on:
-- ThinkPad P1 Gen 3 with Nvidia GPU (Update after more than 1 year of usage: working with no issues whatsoever)
+- ThinkPad P1 Gen 3 with Nvidia GPU
 - ThinkPad X1 Extreme Gen 3 (@dharmatech)
 - ThinkPad P15 Gen 2 (@stavoxnetworks)
 
