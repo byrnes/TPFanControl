@@ -1,22 +1,39 @@
-# TPFanControl
+# TPFanControl for dual-fan ThinkPads (P1, X1 Extreme..)
 
-Update on project status: I no longer have a thinkpad, so I won't be working any further on this project
+Confirmed to be working on:
+- ThinkPad P1 Gen 3 with Nvidia GPU
+- ThinkPad X1 Extreme Gen 3 (@dharmatech)
+- ThinkPad P15 Gen 2 (@stavoxnetworks)
+
+Please open an issue to have me add your model to the confirmed list. Thank you!
 
 ## About
 
-This is a Fork of https://github.com/ThinkPad-Forum/TPFanControl/tree/master/fancontrol. I've updated it to work with two fan devices, such as the P51. This has only been tested on my P51, but it should work on the P50, P70, P71, P52, P72, P1, and X1 Extreme as well, as well as any other dual-fan Thinkpads that are released. A working debug build is included in fancontrol/Debug, but it will need to be run each boot, or added to run at startup. The default fan profile that is included is a silent one, with the fans only coming on at 60c. This can be changed by editing tpfancontrol.ini in the fancontrol/Debug. Many other options can be changed in the config file as well. I used Visual Studio 2017 Community to build, earlier/later versions may work as well but are not tested.
+This is a fork of https://github.com/byrnes/TPFanControl.
 
-## Requirements
+Features / fixes:
 
-To avoid errors, either install [tvicport](https://www.entechtaiwan.com/dev/port/index.shtm) manually or install the original version of TPFanControl found [here](https://sourceforge.net/projects/tp4xfancontrol/), and run the dual-fan version instead of the original version.
+- **On my machine, this completly fixes the issue that the fan on the right side was not always stopped**
+- Speed of both fans (left and right) is now read from the embedded controller and displayed in RPM
+- Sensor name for GPU and some presets are set correctly for modern machines
+- Minor cosmetic changes
+
+Some files were removed from the repository that should not be under version control. Other than that, no code reformatting or refactoring was done for the utmost transparency of changes to the original version of TPFanControl.
+
+## Future development
+It is possible but not yet implemented to control both fans separatly. This way you could have only the CPU fan running as long a the Nvidia is not used. Possible benefit would be to reduce fan noise on each level by 50% while using the Intel GPU.
+
+## Installation
+
+Either install [tvicport](https://www.entechtaiwan.com/dev/port/index.shtm) manually or install the original version of TPFanControl found [here](https://sourceforge.net/projects/tp4xfancontrol/) and run the dual-fan version instead of the original version:
+
+After you installed the original version of TPFanControl, replace the TPFanControl.exe (and possibly TPFanControl.ini) with the files from the release package or the corresponding files in the `fancontrol/Release` directory.
 
 ## Running at startup
+To my knowledge, running at startup is currently not possible with Windows 10 because it lacks a certificate to prevent the Windows security warning.
 
-The easiest way to run TPFC at startup is:
-
-- Right-click on fancontrol.exe and select copy
-- Press Windows-r or search for run in the start menu
-- Type `shell:startup` in the run box
-- Right click in the window that opens and select paste shortcut
-
-Note: this won’t start TPFC until you reboot.
+You can however achieve the same result with Windows Task Scheduler:
+- Create a new task, give it a descriptive name and select "Run with highest privileges"
+- In tab "Triggers" create a new trigeger and select "Begin task": "At log on"
+- In tab "Actions", create a new action and select "Start a program" and the path to TPFanControl.exe
+- Enjoy :)

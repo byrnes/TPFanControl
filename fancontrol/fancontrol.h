@@ -28,7 +28,7 @@
 
 
 
-#define FANCONTROLVERSION "0.63 multiHotKey"
+#define FANCONTROLVERSION "0.64 dual-fan multiHotKey"
 
 #define WM__DISMISSDLG WM_USER+5
 #define WM__GETDATA WM_USER+6
@@ -62,8 +62,10 @@ class FANCONTROL
         struct FCSTATE {
 
 			char FanCtrl,
-				 FanSpeedLo,
-				 FanSpeedHi;
+				 FanSpeedLo1,
+				 FanSpeedHi1,
+			 	 FanSpeedLo2,
+			 	 FanSpeedHi2;
 
 			char Sensors[12];
 			int  SensorAddr[12];

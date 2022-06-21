@@ -1,6 +1,0 @@
-time;cpu;aps;crd;gpu;no5;x7d;bat;x7f;bus;pci;pwr;xc3;rpm;fan;switch;
-
-
-
-
-
