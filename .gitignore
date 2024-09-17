@@ -1,0 +1,8 @@
+.vs/
+.vscode/
+
+fancontrol/Release/*
+fancontrol/Debug/*
+!fancontrol/Debug/*.ini
+!fancontrol/Release/*.exe
+!fancontrol/Release/*.ini
